@@ -23,22 +23,19 @@ function rollcall() {
 
     if [ $get_chamber == "h" ]
         then
-            shift
             chamber="house"
-            shift
     fi
 
     if [ $get_chamber == "s" ]
         then
-            shift
             chamber="senate"
-            shift
     fi
 
     MYDIR=$"${BASH_SOURCE%/*}"
+    BASEURL=$"https://legislature.vermont.gov/bill/loadBillRollCallDetails/2020"
 
-    curl "https://legislature.vermont.gov/bill/loadBillRollCallDetails/2020/$roll_call_id" | in2csv -f json -k data > "$bill-raw.csv"
+    curl "$BASEURL/$roll_call_id" | in2csv -f json -k data > "$bill-raw.csv"
 
-    csvjoin "$bill.csv" "/Users/fsorodrigues/get-roll-call/$chamber-lookup.csv" --snifflimit 0 -c "PersonID" > "$bill-joined.csv"
+    csvjoin "$bill-raw.csv" "$MYDIR/$chamber-lookup.csv" --snifflimit 0 -c "PersonID" > "$bill-joined.csv"
 
 }
