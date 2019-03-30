@@ -4,7 +4,9 @@ A CLI tool to download Vermont's legislature Roll Call votes.
 
 ## Dependencies
 
-`csvkit` [see documentation](https://csvkit.readthedocs.io/en/latest/)
+`csvkit`
+
+see documentation [here](https://csvkit.readthedocs.io/en/latest/)
 
 ## Installation
 
@@ -24,6 +26,7 @@ Then add
 source path/to/roll/call/folder/rollcall.sh
 ```
 to your `.bash-profile`.
+
 To finish up, reload your `.bash-profile` with:
 ```
 source ~/.bash_profile
