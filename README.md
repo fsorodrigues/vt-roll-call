@@ -34,14 +34,16 @@ source ~/.bash_profile
 
 ## Syntax
 
-`rollcall -id <roll-call-id> -bill <bill-number>`
+`rollcall -id <roll-call-id> -bill <bill-number> -chamber <chamber-initial>`
 
 `<roll-call-id>` can be detected from the roll call URLs in the legislature's website:
 
 In `https://legislature.vermont.gov/bill/roll-call/2020/36`, the `<roll-call-id>` is 36.
 
 `<bill-number>` is self-explanatory, but needs to follow the legislature's convention:
-h.444 or s.55, *always uncapitalized*. Proper join that adds legislator information relies on this.
+h.444 or s.55, *always uncapitalized*.
+
+`<chamber-initial>` h for house, s for senate, *always uncapitalized*. Represents the chamber voting on bill.
 
 ## Result
 

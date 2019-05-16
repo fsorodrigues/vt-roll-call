@@ -11,7 +11,11 @@ function rollcall() {
                 -bill)
                     shift
                     bill=$1
-                    get_chamber=$(echo $1| cut -d'.' -f 1)
+                    shift
+                    ;;
+                -chamber)
+                    shift
+                    get_chamber=$1
                     shift
                     ;;
                 *)
@@ -39,3 +43,4 @@ function rollcall() {
     csvjoin "$bill-raw.csv" "$MYDIR/$chamber-lookup.csv" --snifflimit 0 -c "PersonID" > "$bill-joined.csv"
 
 }
+# chamber=$(echo $1| cut -d'.' -f 1)
