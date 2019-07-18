@@ -1,6 +1,11 @@
 #!/bin/bash
 function rollcall() {
 
+    MYDIR=$"${BASH_SOURCE%/*}"
+    year=$(<"$MYDIR/config.txt")
+    chamber="h"
+    set_year=false
+
     while test $# -gt 0; do
            case "$1" in
                 -id)
@@ -18,6 +23,17 @@ function rollcall() {
                     get_chamber=$1
                     shift
                     ;;
+                -year)
+                    shift
+                    year=$1
+                    shift
+                    ;;
+                -set-year)
+                    shift
+                    set_year=true
+                    year=$1
+                    shift
+                    ;;
                 *)
                    echo "$1 is not a recognized flag!"
                    return 1;
@@ -25,22 +41,31 @@ function rollcall() {
           esac
     done
 
-    if [ $get_chamber == "h" ]
+    if [ $set_year == false ];
         then
-            chamber="house"
+            if [ $get_chamber == "h" ]
+                then
+                    chamber="house"
+            fi
+
+            if [ $get_chamber == "s" ]
+                then
+                    chamber="senate"
+            fi
+
+            if [ $(($year%2)) == 1 ]
+                then
+                    year=$(($year+1))
+            fi
+
+            BASEURL=$"https://legislature.vermont.gov/bill/loadBillRollCallDetails"
+
+            curl "$BASEURL/$year/$roll_call_id" | ~/envs/csvkit/bin/in2csv -f json -k data > "$bill-raw.csv"
+
+            ~/envs/csvkit/bin/csvjoin "$bill-raw.csv" "$MYDIR/$chamber-lookup.csv" --snifflimit 0 -c "PersonID" > "$bill-joined.csv"
+
+        else
+            echo $year > "$MYDIR/config.txt"
     fi
-
-    if [ $get_chamber == "s" ]
-        then
-            chamber="senate"
-    fi
-
-    MYDIR=$"${BASH_SOURCE%/*}"
-    BASEURL=$"https://legislature.vermont.gov/bill/loadBillRollCallDetails/2020"
-
-    curl "$BASEURL/$roll_call_id" | in2csv -f json -k data > "$bill-raw.csv"
-
-    csvjoin "$bill-raw.csv" "$MYDIR/$chamber-lookup.csv" --snifflimit 0 -c "PersonID" > "$bill-joined.csv"
 
 }
-# chamber=$(echo $1| cut -d'.' -f 1)
