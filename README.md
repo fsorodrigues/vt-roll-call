@@ -34,6 +34,8 @@ source ~/.bash_profile
 
 ## Syntax
 
+### Output
+
 `rollcall -id <roll-call-id> -bill <bill-number> -chamber <chamber-initial>`
 
 `<roll-call-id>` can be detected from the roll call URLs in the legislature's website:
@@ -45,13 +47,17 @@ h.444 or s.55, *always uncapitalized*.
 
 `<chamber-initial>` h for house, s for senate, *always uncapitalized*. Represents the chamber voting on bill.
 
-## Result
-
 Two `csv` files will be created in the current working directory:
 
-```
-<bill-number>-raw.csv
-<bill-number>-joined.csv
-```
+- `<bill-number>-raw.csv`
+- `<bill-number>-complete.csv`
 
 If files with those names already exist in the directory, they will be overwritten.
+
+### Config
+
+Two flags have been created for configuration:
+
+- `-set-year <year>`: allows users to set the legislature to be scraped. Input calendar years and script will automatically calculate the legislature.
+
+- `-update`: regenerates lookup files that are used for complete output. Should be used when changing years or when new legislators are introduced mid-legislature.

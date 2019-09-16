@@ -1,31 +1,31 @@
-Town,PersonID,PartyID,Party,District,Name
-Burlington,14665,D/P,Democrat/Progressive,Chittenden District,Tim Ashe
-Brattleboro,24029,D,Democrat,Windham District,Becca Balint
-Burlington,15791,D/P,Democrat/Progressive,Chittenden District,Philip Baruth
-Lyndon,15792,R,Republican,Caledonia District,Joe Benning
-New Haven,20396,D,Democrat,Addison District,Christopher Bray
-Swanton,29338,R,Republican,Franklin District,Randy Brock
-Bennington,24030,D,Democrat,Bennington District,Brian Campion
-Woodstock,27152,D,Democrat,Windsor District,Alison Clarkson
-Rutland Town,24031,R,Republican,Rutland District,Brian Collamore
-Montpelier,14604,D,Democrat,Washington District,Ann Cummings
-Middlebury,30978,D,Democrat,Addison District,Ruth Hardy
-Rutland City,30979,D/P,Democrat/Progressive,Rutland District,Cheryl Hooker
-Williston,27149,D,Democrat,Chittenden District,Debbie Ingram
-Danville,14622,D,Democrat,Caledonia District,Jane Kitchel
-Williston,14616,D,Democrat,Chittenden District,"Virginia ""Ginny"" Lyons"
-Williamstown,14608,D,Democrat,Orange District,Mark A. MacDonald
-Colchester,14610,D,Democrat,Grand Isle District,Dick Mazza
-Bethel,14625,D,Democrat,Windsor District,Dick McCormack
-Rutland Town,30981,R,Republican,Rutland District,James McNeil
-Ludlow,14612,D,Democrat,Windsor District,Alice W. Nitka
-St. Albans Town,30980,R,Republican,Franklin District,Corey Parent
-Burlington,27150,P/D/W,Progressive/Democrat,Chittenden District,Christopher A. Pearson
-Montpelier,30982,D/P,Democrat/Progressive,Washington District,Andrew Perchlik
-Middlesex,15795,P/D/W,Progressive/Democrat,Washington District,Anthony Pollina
-Glover,20398,D,Democrat,Essex-Orleans District,John Rodgers
-Bennington,14613,D,Democrat,Bennington District,Dick Sears
-South Burlington,23179,D,Democrat,Chittenden District,Michael Sirotkin
-Troy,14614,D,Democrat,Essex-Orleans District,Robert Starr
-Cambridge,15796,R,Republican,Lamoille District,Richard Westman
-Putney,14620,D,Democrat,Windham District,Jeanette K. White
+PersonID,Town,PartyID,Party,District,Name
+14665,Burlington,D/P,Democrat/Progressive,Chittenden District,Tim Ashe
+24029,Brattleboro,D,Democrat,Windham District,Becca Balint
+15791,Burlington,D/P,Democrat/Progressive,Chittenden District,Philip Baruth
+15792,Lyndon,R,Republican,Caledonia District,Joe Benning
+20396,New Haven,D,Democrat,Addison District,Christopher Bray
+29338,Swanton,R,Republican,Franklin District,Randy Brock
+24030,Bennington,D,Democrat,Bennington District,Brian Campion
+27152,Woodstock,D,Democrat,Windsor District,Alison Clarkson
+24031,Rutland Town,R,Republican,Rutland District,Brian Collamore
+14604,Montpelier,D,Democrat,Washington District,Ann Cummings
+30978,Middlebury,D,Democrat,Addison District,Ruth Hardy
+30979,Rutland City,D/P,Democrat/Progressive,Rutland District,Cheryl Hooker
+27149,Williston,D,Democrat,Chittenden District,Debbie Ingram
+14622,Danville,D,Democrat,Caledonia District,Jane Kitchel
+14616,Williston,D,Democrat,Chittenden District,Virginia 'Ginny' Lyons
+14608,Williamstown,D,Democrat,Orange District,Mark A. MacDonald
+14610,Colchester,D,Democrat,Grand Isle District,Dick Mazza
+14625,Bethel,D,Democrat,Windsor District,Dick McCormack
+30981,Rutland Town,R,Republican,Rutland District,James McNeil
+14612,Ludlow,D,Democrat,Windsor District,Alice W. Nitka
+30980,St. Albans Town,R,Republican,Franklin District,Corey Parent
+27150,Burlington,P/D/W,Progressive/Democrat,Chittenden District,Christopher A. Pearson
+30982,Montpelier,D/P,Democrat/Progressive,Washington District,Andrew Perchlik
+15795,Middlesex,P/D/W,Progressive/Democrat,Washington District,Anthony Pollina
+20398,Glover,D,Democrat,Essex-Orleans District,John Rodgers
+14613,Bennington,D,Democrat,Bennington District,Dick Sears
+23179,South Burlington,D,Democrat,Chittenden District,Michael Sirotkin
+14614,Troy,D,Democrat,Essex-Orleans District,Robert Starr
+15796,Cambridge,R,Republican,Lamoille District,Richard Westman
+14620,Putney,D,Democrat,Windham District,Jeanette K. White
